@@ -14,6 +14,13 @@ class LightShadow {
 
 		this.camera = camera;
 
+		// Camera can be undefined when cloning LightShadow.
+		if ( this.camera !== undefined ) {
+
+			this.camera.layers.enableAll();
+
+		}
+
 		this.bias = 0;
 		this.normalBias = 0;
 		this.radius = 1;
